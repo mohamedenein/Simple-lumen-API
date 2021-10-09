@@ -1,24 +1,26 @@
-# Lumen PHP Framework
+# Simple lumen API to make a profile for users with Articles
+- Build using lumen framework version ^8.*. 
+- MySql Database
+-  [JSON Web Token (JWT)](https://github.com/tymondesigns/jwt-auth) to handle authentication 
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+# Documentation 
+### User Register Api
+Register user by email and phone number and save user name in json `ex:{"en": "ahmed", "ar": "احمد"}`
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-## Official Documentation
+### login Api
+User can login with email or phone number
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+### User Verification Api
+user can verify with email or phone number
 
-## Contributing
+### Create/update Article Api
+Authenticated user can create article in two languages, title and content saved in json datatype `ex:{"en": "title", "ar": "عنوان"}`
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Delete Article Api 
+Authenticated user can delete article by Id
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Profile with articles Api
+ Authenticated user can view his profile with articles in selected language
+ex endpoint `localhost:8000/api/profile/lang=en`
+ 
